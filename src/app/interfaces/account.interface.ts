@@ -1,17 +1,17 @@
 import { CustomerModel } from "./customer.interface";
 
-export interface AccountInterface {
+export interface AccountModel {
    
     id: string;
-    customer: CustomerModel;
-    accountType: AccountTypeInterface;
+    customer_id: CustomerModel;
+    account_type_id: AccountTypeInterface;
     balance: number;
-    state:boolean;
+    state: boolean;
     deletedAt?: number | Date;
 }
 
 export interface AccountTypeInterface {    
     id: string;
     name: string;
-    state:boolean;
+    state: boolean;
 }

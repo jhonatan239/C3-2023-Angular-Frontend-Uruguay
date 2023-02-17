@@ -19,13 +19,6 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environment/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { NgModule } from '@angular/core';
-import { HomeComponent } from './pages/home/home.component';
-import { CustomerComponent } from './administrator/customer/customer.component';
-import { CustomerProfileComponent } from './pages/customer-profile/customer-profile.component';
-import { RouterModule } from '@angular/router';
-import { SignUpModel } from './interfaces/singup.interface';
-import { SingupComponent } from './login/singup/singup.component';
-import { SinginComponent } from './login/singin/singin.component';
 import { LoginModule } from './login/login-module.module';
 
 
@@ -35,8 +28,8 @@ import { LoginModule } from './login/login-module.module';
 @NgModule({
   declarations: [
     AppComponent,
-    NewDepositComponent,
-    NewTransaccionComponent,
+    //NewDepositComponent,
+  //  NewTransaccionComponent,
     ViewTransferComponent,
     EjercicioComponent,
    //HomeComponent,

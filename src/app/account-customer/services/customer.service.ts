@@ -19,7 +19,7 @@ export class CustomerService {
 
   public getAllCustomerById(): Observable <CustomerModel>{
 
-    return this.httpClient.get<CustomerModel>(this.api + "/customer/getCustomerInfo/3a13fd85-65c2-4374-9921-48f4ccec4c1e" )
+    return this.httpClient.get<CustomerModel>(this.api + "/customer/getCustomerInfo/c0bc2674-83fa-4102-ada9-f9833c823a29" )
    
      }
 

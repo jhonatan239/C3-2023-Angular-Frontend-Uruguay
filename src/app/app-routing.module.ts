@@ -10,6 +10,7 @@ import { GuardsGuard } from './login/guards/guards.guard';
 import { HomeComponent } from './pages/home/home.component';
 import { CustomerComponent } from './administrator/customer/customer.component';
 import { CustomerProfileComponent } from './pages/customer-profile/customer-profile.component';
+import { NewDepositComponent } from './movements/new-deposit/new-deposit.component';
 
 
 
@@ -24,8 +25,9 @@ const routes: Routes = [
  // { path: 'profile', component: ProfileComponent, canActivate:[GuardsGuard]}, 
   { path: 'ejercicio', component: EjercicioComponent, canActivate:[GuardsGuard]}, 
   { path: 'Home', component: HomeComponent}, 
-  //{ path: 'profile', component: CustomerProfileComponent}, 
-
+  //{ path: 'profile', component: CustomerProfileComponent},
+  
+   
   {path: 'account-customer', 
   loadChildren:()=> import('./account-customer/account-customer.module')
   .then(m => m.AccountCustomerModule)}, //child

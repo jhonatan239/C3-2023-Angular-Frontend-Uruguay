@@ -1,1 +1,24 @@
-<p>new-deposit works!</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de depósito</title>
+
+</head>
+<body>
+	<div class="container">
+		<h1>Formulario de depósito</h1>
+		<form [formGroup]="depFormCust" (ngSubmit)="createDeposit()">
+			<label for="monto">Monto:</label>
+			<input type="text" placeholder="Ingrese Monto" formControlName="amount" >
+
+			<label for="cuenta">Cuenta bancaria:</label>
+			<input type="text" placeholder="Numero de Cuenta" formControlName="account_id" >
+
+			<div class="botones">
+				<button type="submit" (click)= "true" class="depositar">Depositar</button>
+				<button class="atras" (click)="onClickAtras()">Atrás</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 
-export class AccountModel{
+/* export class AccountModel{
 
 
 id: string;
@@ -31,4 +31,4 @@ getData(): string{
     });
 
 }
-}
+} */

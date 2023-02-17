@@ -26,19 +26,19 @@ export class SingupComponent {
   formValue: FormGroup | undefined;
 
   signUpForm = this.formBuilder.group({
-    documentTypeId: this.formBuilder.nonNullable.control('',
+    documentTypeId: new FormControl('',
     { validators: [Validators.required] }),
-    document: this.formBuilder.nonNullable.control('',
+    document: new FormControl('',
     { validators: [Validators.required] }),
-    fullName: this.formBuilder.nonNullable.control('',
+    fullName: new FormControl ('',
     { validators: [Validators.required]}),
-    email: this.formBuilder.nonNullable.control('',
+    email: new FormControl('',
     { validators: [Validators.required, Validators.email] }),
-    phone: this.formBuilder.nonNullable.control('',
+    phone: new FormControl('',
     { validators: [Validators.required] }),
-    password: this.formBuilder.nonNullable.control('',
+    password:new  FormControl('',
     { validators: [Validators.required] }),
-    accountTypeId: this.formBuilder.nonNullable.control('', 
+    accountTypeId: new FormControl('', 
     { validators: [Validators.required] }),
     
   });
@@ -50,35 +50,32 @@ export class SingupComponent {
    
  register() {
    
+  if (this.signUpForm.valid){
+
+    
     console.log(this.signUp)
     this.signUp = {
-      documentTypeId: this.signUpForm.controls["documentTypeId"].value, 
-      document: this.signUpForm.controls["document"].value,
-      fullName: this.signUpForm.controls["fullName"].value,
-      email: this.signUpForm.controls["email"].value,
-      phone: this.signUpForm.controls["phone"].value,
-      password: this.signUpForm.controls["password"].value,
-      accountTypeId: this.signUpForm.controls["accountTypeId"].value, 
+      documentTypeName: this.signUpForm.controls["documentTypeId"].value!, 
+      document: this.signUpForm.controls["document"].value!,
+      fullName: this.signUpForm.controls["fullName"].value!,
+      email: this.signUpForm.controls["email"].value!,
+      phone: this.signUpForm.controls["phone"].value!,
+      password: this.signUpForm.controls["password"].value!,
+      accountTypeName: this.signUpForm.controls["accountTypeId"].value!, 
     };
-
-    this.formValue = new FormGroup({
-       email: new FormControl().value,
-       password: new FormControl().value,
-     });
-
-console.log(this.formValue?.value)
 
     this.customerService.createUser(this.signUp).subscribe({
       next: token => {
-        localStorage.setItem('token', "tokentest");
-        this.serviceCom.register(this.formValue?.value)
+        localStorage.setItem('token', token);
+        this.serviceCom.decodeValue(token)
       },
       error: err => console.error(err),
       complete: () => {
-        this.router.navigate(['**']);
+        this.router.navigate(['/account-customer/profile'])
       },
     });
-   
+}
+ 
   }
    
 }

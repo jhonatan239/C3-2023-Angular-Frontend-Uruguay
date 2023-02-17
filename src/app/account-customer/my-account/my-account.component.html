@@ -1,1 +1,6 @@
-<p>my-account works!</p>
+<div class="cuentas">
+    <h2>Cuentas bancarias</h2>
+    <ul *ngFor="let cuenta of accounts ">
+      <li>{{cuenta.account_type_id.name}}: {{cuenta.balance}}</li>
+    </ul>
+  </div>

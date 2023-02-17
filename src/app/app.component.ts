@@ -8,6 +8,12 @@ import { AuthService } from './login/services/auth.service';
 })
 export class AppComponent implements OnInit {
   
+  
+  // cambio metodo title por q podio crear metodo
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
+  
 constructor (
 private serviceCom: AuthService
 
@@ -16,7 +22,7 @@ private serviceCom: AuthService
 
 }
 
-  status: boolean = true
+  status: boolean = false
 
   ngOnInit(): void {
     this.serviceCom.statusVariable.subscribe(statusValue => this.status = statusValue);

@@ -1,48 +1,58 @@
 
-
-
-<p> email: {{customer?.email}} </p>
-<p>Phone: {{ customer?.phone }}</p>
-
-
-
   <input type="submit" (click)="logOut()" class="fadeIn fourth" value="logOut">
+       
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Perfil Bancario</title>
+     
+    </head>
+    <body>
+      <div class="contenedor">
+        <div class="perfil">
+          <img src="C:\Users\Cafe\Pictures/avatar.jpg" alt="Avatar">
+          <h1>{{ this.auth.currentUser.fullName }}</h1>
+          <p>Cédula:{{ this.auth.currentUser.document }} </p>
+          <p>Tipo de documento: <p> {{this.auth.currentUser.documentType.name }} </p>
+          <p>Phone: {{ this.auth.currentUser.phone }}</p>
+          <p> email: {{this.auth.currentUser.email}} </p>
+        </div>
+        <button class="atras" (click)="onClickAtras()">Editar Datos</button>
         
-<!-- 
-<table *ngFor="let index of customers">
-<ul>
-<a>Email: {{index.email}} </a>
-<a>Phone: {{index.phone}}</a>
-
-</ul>
-
-</table> -->
+        
+        <app-my-account></app-my-account>
 
 
-
-<!-- <head>
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
- 
-</head>
-<body >
-    
-<div class="toolbar" >
-    <div class="toolbar-item" id="profile">
-      <i class="fas fa-user"></i>
-      <p>Perfil</p>
-    </div>
-    <div class="toolbar-item" id="accounts">
-      <i class="fas fa-credit-card"></i>
-      <p>Cuentas</p>
-    </div>
-    <div class="toolbar-item" id="deposits">
-      <i class="fas fa-dollar-sign"></i>
-      <p>Depósitos</p>
-    </div>
-    <div class="toolbar-item" id="transfers">
-      <i class="fas fa-exchange-alt"></i>
-      <p>Transferencias</p>
-    </div>
-
-</body> -->
+        <div class="transacciones">
+          <h2>Últimas transacciones</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Descripción</th>
+                <th>Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01/02/2023</td>
+                <td>Pago de factura de luz</td>
+                <td>$50.000</td>
+              </tr>
+              <tr>
+                <td>28/01/2023</td>
+                <td>Transferencia a cuenta de ahorros</td>
+                <td>$100.000</td>
+              </tr>
+              <tr>
+                <td>25/01/2023</td>
+                <td>Retiro en cajero automático</td>
+                <td>$200.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </body>
+  </html>
+  

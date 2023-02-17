@@ -2,13 +2,13 @@
 
 export interface SignUpModel {
 
-    documentTypeId: string;
+    documentTypeName: string;
     document: string;
     fullName: string;
     email: string;
     phone: string;
     password: string;
-    accountTypeId: string;
+    accountTypeName: string;
     
     balance?: number;
 

@@ -1,37 +1,88 @@
-.toolbar {
-    background-color: #4a7da7;
-    height: 80%;
-    width: 120px;
-    position: relative;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px ;
-    border: none;
-    border-radius: 50px;
-    position: fixed;
-    top: 10%;
-    bottom: 0;
-  }
-  
-  .toolbar-item {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
-    transition: transform 1.2s;
-  }
-  
-  .toolbar-item:hover {
-    transform: scale(1.1);
-  }
-  
-  .toolbar-item i {
-    font-size: 35px;
-    margin-bottom: 10px;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.perfil {
+  text-align: center;
+}
+
+.perfil img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.perfil h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.perfil p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.cuentas {
+  margin-top: 40px;
+}
+
+.cuentas h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cuentas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cuentas li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.transacciones {
+  margin-top: 40px;
+}
+
+.transacciones h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.transacciones table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transacciones th {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.transacciones td {
+  font-size: 16px;
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.transacciones tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

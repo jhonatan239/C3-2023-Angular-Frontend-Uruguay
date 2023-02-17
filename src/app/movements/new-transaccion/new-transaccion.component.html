@@ -1,1 +1,28 @@
-<p>new-transaccion works!</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de depósito</title>
+
+</head>
+<body>
+	<div class="container">
+		<h1>Formulario de Transferencia</h1>
+		<form [formGroup]="transFormBuil" (ngSubmit)="createTransfer()">
+			<label for="monto">Monto:</label>
+			<input type="text" placeholder="Ingrese Monto" formControlName="amount" >
+
+			<label for="cuenta">Cuenta bancaria entrada:</label>
+			<input type="text" placeholder="Numero de Cuenta " formControlName="account_in" >
+            <label for="cuenta">Cuenta bancaria salida:</label>
+			<input type="text" placeholder="Numero de Cuenta" formControlName="account_out" >
+            <label for="cuenta">Rason:</label>
+			<input type="text" placeholder="Rason" formControlName="reason" >
+
+			<div class="botones">
+				<button type="submit" (click)= "true" class="depositar">Tranferir</button>
+				<button class="atras" (click)="onClickAtras()">Atrás</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
